@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="components-demo">
+        <cim szoveg="Ez a szoveg" alcim="Ez az alcim" alalcim="Alalcim"></cim>
+        <cim></cim>
+    </div>
+    <script>
+        Vue.component('cim', {
+            props: ['szoveg', 'alcim', 'alalcim'],
+            template: 
+                `
+                <div>
+                <h1>{{ szoveg }}</h1>
+                <h2>{{ alcim }}</h2>
+                <h3>{{ alalcim}}</h3>
+                </div>`,
+        });
+        let app = new Vue({ el: '#components-demo'});
+    </script>
+</body>
+</html>
