@@ -1,3 +1,6 @@
 eslint 
 prettier
-vetur
+vetur 
+
+
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser
