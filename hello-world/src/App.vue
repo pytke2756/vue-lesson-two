@@ -3,7 +3,8 @@
     <HelloWorld 
       v-for="todo in todos"
       :msg="todo"
-      :key="todo.title"/>
+      :key="todo.title"
+      v-on:delete-item="deleteTodo"/>
   </div>
 </template>
 
@@ -32,7 +33,14 @@ export default {
         },
     ]
     }
-  }
+  },
+  methods:{
+    deleteTodo(todo){
+      this.todos = this.todos.filter(function(item){
+        return todo.title != item.title
+      });
+    },
+  },
 }
 </script>
 
